@@ -21,17 +21,25 @@ function Searchbar() {
     // Add your search logic here
   }
   return (
-    <form className='flex ic justify-between gap-4 p-2 rounded-md flex-1 bg-gray-100' 
+    <form className='flex p-1 gap-4 rounded-md w-full' 
     onSubmit={handleSearch} >
-        <input type='text' name='name' className="outline-none bg-transparent" placeholder="Search..."/>
-        <button>
-            <Image
+        <div className='flex items-center 
+            gap-2
+            justify-center py-1 
+            border border-black rounded-md transition-all duration-200 '>
+           <Image
                 src={'/search.png'}
                 alt=''
                 width={16}
                 height={16}
-                
-            />
+               />
+          <input type='text' name='name' className="outline-none rounded-md px-2 h-full w-10/12 py-2" placeholder="Search..."/>
+       
+        </div>
+       
+        <button className='flex items-center justify-center e w-2/10 px-2 py-2 bg-red-200 rounded-md hover:bg-gray-300 transition-all duration-200' type='submit'>
+          Search  
+           
         </button>
     </form>
   )
